@@ -494,6 +494,33 @@
   animation: toast-in 0.35s var(--ease);
   font-size: 14px;
 }
+@media (max-width: 520px) {
+  .toast-region {
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    width: calc(100% - 24px);
+  }
+  .toast {
+    padding: 10px 10px 10px 14px;
+    font-size: 13px;
+  }
+  .toast .link-btn {
+    white-space: nowrap;
+  }
+}
+
+/* Touch screens: no "stuck" hover lift after tapping a card */
+@media (hover: none) {
+  .card:hover,
+  .why__card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--line);
+  }
+  .card:hover .card__media img {
+    transform: none;
+  }
+}
+
 @keyframes toast-in {
   from {
     opacity: 0;
