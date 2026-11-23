@@ -1,0 +1,13 @@
+# Copy this file to the project root as .gitignore
+node_modules/
+dist/
+build/
+.next/
+coverage/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+*.log
